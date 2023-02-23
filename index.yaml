@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  lacework-agent-windows:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-02-23T15:49:29.276291-05:00"
+    description: Lacework Windows Agent
+    digest: 22b8f7bd9aeaa8361db411dfdbfb8d7e2761acf68d303b7c5e9aa4f8f598bd13
+    home: https://www.lacework.com
+    icon: https://www.lacework.com/wp-content/uploads/2019/07/Lacework_Logo_color_2019.svg
+    keywords:
+    - monitoring
+    - security
+    - run-time
+    - metric
+    - troubleshooting
+    kubeVersion: '> 1.23.0-0'
+    maintainers:
+    - email: info@lacework.net
+      name: lacework-support
+    name: lacework-agent-windows
+    urls:
+    - lacework-agent-windows-1.4.0.tgz
+    version: 1.4.0
+generated: "2023-02-23T15:49:29.271056-05:00"
