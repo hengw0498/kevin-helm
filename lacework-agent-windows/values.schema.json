@@ -337,13 +337,6 @@
                 "stdoutLogging": {
                     "type": "boolean"
                 },
-                "tags": {
-                    "type": [
-                        "object",
-                        "null"
-                    ],
-                    "additionalProperties": true
-                },
                 "perfmode": {
                     "type": [
                         "string",
@@ -418,14 +411,9 @@
                             "$ref": "#/properties/laceworkConfig/properties/autoUpgrade"
                         },
                         "env": {
-                            "$ref": "#/properties/laceworkConfig/properties/env"                        
-                        },
+                            "$ref": "#/properties/laceworkConfig/properties/env"                        },
                         "kubernetesCluster": {
-                            "$ref": "#/properties/laceworkConfig/properties/kubernetesCluster"
-                        },
-                        "tags": {
-                            "$ref": "#/properties/laceworkConfig/properties/tags"
-                        },
+                            "$ref": "#/properties/laceworkConfig/properties/kubernetesCluster"                        },
                         "fim": {
                             "type": "object",
                             "additionalProperties": false,
