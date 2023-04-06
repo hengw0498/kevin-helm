@@ -27,6 +27,10 @@ windowsAgent:
     # [Optional] Kubernetes cluster name
     # https://support.lacework.com/hc/en-us/articles/360005263034-Deploy-on-Kubernetes
     kubernetesCluster:
+    # [Optional] Add user defined tags to k8s clusters
+    tags: 
+    # test_01: "Value_01"
+    # test_02: "Value_02"
     # [Optional] Configure File Integrity Monitoring
     # https://docs.lacework.com/onboarding/windows-agent-config-json-properties#file-integrity-monitoring-fim-properties
     fim:

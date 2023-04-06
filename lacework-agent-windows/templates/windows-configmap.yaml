@@ -36,8 +36,14 @@ data:
   {{- if .Values.windowsAgent.agentConfig.hids }} "hids": "{{ .Values.windowsAgent.agentConfig.hids}}", {{- end }}
      "serverurl": "{{ .Values.windowsAgent.agentConfig.serverUrl}}",
      "containers": {"mode": "enable"},
-     "tags": {"Env": "{{ .Values.windowsAgent.agentConfig.env }}"
-              {{- if .Values.windowsAgent.agentConfig.kubernetesCluster }}, "KubernetesCluster" :"{{ .Values.windowsAgent.agentConfig.kubernetesCluster}}" {{- end }}
+     "tags": {
+              {{- if .Values.windowsAgent.agentConfig.tags}}
+                    {{ .Values.windowsAgent.agentConfig.tags | toJson | trimPrefix "{" | trimSuffix "}" }},
+              {{- end }}
+                    "Env":"{{ .Values.windowsAgent.agentConfig.env }}"
+              {{- if .Values.windowsAgent.agentConfig.kubernetesCluster -}}
+                    ,"KubernetesCluster":"{{ .Values.windowsAgent.agentConfig.kubernetesCluster}}"
+              {{- end }}
              }
     }
 {{- end }}
